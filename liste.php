@@ -104,14 +104,14 @@ var_dump($ete);
 
 echo "<ul>";
 
-foreach ($ete as $legumes => $caracteristique) {
-        echo "<li>"."Pour chaque $legumes : "."</li>";
-        foreach ($caracteristique as $caracteristiques => $valeur) {
-            echo "<ul>"."<li>".$caracteristiques." : ".$valeur."</li>"."</ul>";
+foreach ($ete as $legume => $caracteristiques) {
+        echo "<li>"."Pour chaque $legume : "."</li>";
+        foreach ($caracteristiques as $caracteristique => $valeur) {
+            echo "<ul>"."<li>".$caracteristique." : ".$valeur."</li>"."</ul>";
         }
     }
-
-    echo "</ul>";
+              
+echo "</ul>";
 
 echo "<hr>";
 
@@ -151,21 +151,29 @@ $saisons = [
 
 var_dump($saisons);
 
+
+
+
 echo "<ul>";
-
 foreach ($saisons as $saison => $legumes) {
-    echo "<li>"."Pour la saison d'".$saison.", il y aura : "."</li>";
-    foreach ($legumes as $legume => $caracteristiques) {
-        echo "<ul>"."<li>"."<strong>".$legume."</strong>"."</li>"."</ul>" ;
-        foreach ($caracteristiques as $caracteristique => $valeur) {
-            echo "<ul>"."<li>".$caracteristique." : ".$valeur."</li>"."</ul>";
-            
-            
-        }
-    }
-}
+    echo "<li>".$saison." : "."</li>";
 
+        echo "<ul>";
+        foreach ($legumes as $legume => $caracteristiques) {
+            echo "<li>".$legume." : "."</li>";
+
+            echo "<ul>";
+            foreach ($caracteristiques as $caracteristique => $valeur) {
+                echo "<li>".$caracteristique." : ".$valeur."</li>";
+            }
+            echo "</ul>";
+        }
+        echo "</ul>";
+}
 echo "</ul>";
+
+
+
 
 echo "<hr>";
 
