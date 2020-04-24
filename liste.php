@@ -523,3 +523,221 @@ function writeMsg (){
 writeMsg();
 
 ?>
+
+<hr>
+
+<?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Source : https://www.w3resource.com/php-exercises/php-array-exercises.php#editorr
+
+//Exerice 1:
+
+$color = array('white', 'green', 'red', 'blue', 'black');
+
+echo "The memory of that scene for me is like a frame of film 
+forever frozen at that moment: the $color[2] carpet, the $color[1] 
+lawn, the $color[0] house, the leaden sky. The new 
+president and his first lady. - Richard M. Nixon"."\n";
+
+echo"<hr>";
+
+//Exerice 2:
+
+$colors = ['white', 'green', 'red'];
+
+sort($colors);
+
+echo"<ul>";
+foreach ($colors as $color) {
+    echo"<li>". $color. "</li>";
+}
+echo"</ul>";
+
+echo"<hr>";
+
+
+//Exerice 3:
+
+$ceu = [ 
+    "Italy"=>"Rome", 
+    "Luxembourg"=>"Luxembourg", 
+    "Belgium"=> "Brussels", 
+    "Denmark"=>"Copenhagen", 
+    "Finland"=>"Helsinki", 
+    "France" => "Paris", 
+    "Slovakia"=>"Bratislava", 
+    "Slovenia"=>"Ljubljana", 
+    "Germany" => "Berlin", 
+    "Greece" => "Athens", 
+    "Ireland"=>"Dublin", 
+    "Netherlands"=>"Amsterdam", 
+    "Portugal"=>"Lisbon", 
+    "Spain"=>"Madrid", 
+    "Sweden"=>"Stockholm", 
+    "United Kingdom"=>"London", 
+    "Cyprus"=>"Nicosia", 
+    "Lithuania"=>"Vilnius", 
+    "Czech Republic"=>"Prague", 
+    "Estonia"=>"Tallin", 
+    "Hungary"=>"Budapest", 
+    "Latvia"=>"Riga", 
+    "Malta"=>"Valetta", 
+    "Austria" => "Vienna", 
+    "Poland"=>"Warsaw"
+    ] ;
+
+foreach ($ceu as $country => $capital) {
+    echo "The capital of ".$country." is ".$capital;
+    echo"<br>";
+}
+
+echo"<hr>";
+
+
+//Exerice 4:
+
+$x = [1, 2, 3, 4, 5];
+
+var_dump($x);
+
+unset($x[3]);
+echo"<br>";
+
+var_dump($x);
+
+echo"<hr>";
+
+//Exerice 5:
+
+$color = array(4 => 'white', 6 => 'green', 11=> 'red');
+
+$result = $color[4];
+
+echo $result;
+
+echo"<hr>";
+
+//Exerice 7:
+
+$original = [1,2,3,4,5];
+$carac = "?";
+
+array_splice($original, 4,null, $carac);
+
+var_dump($original);
+
+foreach ($original as $number) {
+    echo $number." ";
+}
+;
+
+echo"<hr>";
+
+//Exerice 8:
+
+$array = [
+    "Sophia"=>"31",
+    "Jacob"=>"41",
+    "William"=>"39",
+    "Ramesh"=>"40"
+    ]
+;
+
+
+
+//----
+
+
+$name = array_keys($array);
+
+sort($name);
+var_dump ($name);
+
+echo"<hr>";
+
+//Exerice 8:
+
+$temperature = [78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 81, 76, 73, 68, 72, 73, 75, 65, 74, 63, 67, 65, 64, 68, 73, 75, 79, 73];
+var_dump($temperature);
+$total = 0;
+
+foreach ($temperature as $key) {
+    $total += $key;
+}
+var_dump($total);
+$moyenne = $total / count($temperature);
+
+echo "La moyenne des températures est : $moyenne";
+
+echo"<hr>";
+
+sort($temperature);
+
+for ($i=0; $i <5 ; $i++) { 
+    echo $temperature[$i];
+    echo"<br>";
+}
+
+echo"<hr>";
+
+for ($i=(count($temperature)-5); $i < count($temperature); $i++) { 
+    echo $temperature[$i];
+    echo"<br>";
+}
+
+echo"<hr>";
+echo"<hr>";
+echo"<hr>";
+
+$array = [ 5, 3, 1, 3, 8, 7, 4, 1, 1, 3 ];
+
+sort($array);
+var_dump($array);
+
+
+
+
+
+
+

@@ -214,11 +214,14 @@ echo "<table border='1'>";
             for ($j=1; $j <=8 ; $j++) { 
                 $total = $i + $j;
                 if ($total%2===0) {
-                    echo "<td height=30px width=30px style='background-color: black;'></td>";
+                    echo "<td height=30px width=30px style='background-color: black; color:white;'>$total</td>";
+                    
                 }
                 else {
-                    echo "<td height=30px width=30px style='background-color: white;'></td>";
+                    echo "<td height=30px width=30px style='background-color: white;'>$total</td>";
+                
                 }
+
             }
 
         echo"</tr>";
@@ -256,6 +259,7 @@ for ($i=1; $i <=100 ; $i++) {
     }
     else {
         
+
     }
 }
 
